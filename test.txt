@@ -1,0 +1,96 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.springframework.samples:spring-petclinic:war:4.2.6-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-resources-plugin is missing. @ line 336, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building petclinic 4.2.6-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> tomcat7-maven-plugin:2.2:run (default-cli) > process-classes @ spring-petclinic >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spring-petclinic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 20 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 46 source files to c:\Ben\spring-petclinic\target\classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.7
+[INFO] 
+[INFO] <<< tomcat7-maven-plugin:2.2:run (default-cli) < process-classes @ spring-petclinic <<<
+[INFO] 
+[INFO] --- tomcat7-maven-plugin:2.2:run (default-cli) @ spring-petclinic ---
+[INFO] Running war on http://localhost:9966/petclinic
+[INFO] Using existing Tomcat server configuration at c:\Ben\spring-petclinic\target\tomcat
+[INFO] create webapp with contextPath: /petclinic
+INFO  ContextLoader - Root WebApplicationContext: initialization started
+INFO  XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Nov 04 22:01:35 EDT 2016]; root of context hierarchy
+INFO  XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring/business-config.xml]
+INFO  XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring/datasource-config.xml]
+INFO  XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring/tools-config.xml]
+INFO  PropertyPlaceholderConfigurer - Loading properties file from class path resource [spring/data-access.properties]
+INFO  PropertyPlaceholderConfigurer - Loading properties file from class path resource [spring/data-access.properties]
+INFO  AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'petclinic'
+INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: petclinic
+	...]
+INFO  Version - HHH000412: Hibernate Core {4.3.11.Final}
+INFO  Environment - HHH000206: hibernate.properties not found
+INFO  Environment - HHH000021: Bytecode provider name : javassist
+INFO  Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+INFO  Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+INFO  ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+INFO  Version - HV000001: Hibernate Validator 5.2.4.Final
+INFO  ScriptUtils - Executing SQL script from class path resource [db/hsqldb/initDB.sql]
+INFO  ScriptUtils - Executed SQL script from class path resource [db/hsqldb/initDB.sql] in 20 ms.
+INFO  ScriptUtils - Executing SQL script from class path resource [db/hsqldb/populateDB.sql]
+INFO  ScriptUtils - Executed SQL script from class path resource [db/hsqldb/populateDB.sql] in 24 ms.
+INFO  EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+INFO  AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+INFO  AnnotationMBeanExporter - Bean with name 'callMonitor' has been autodetected for JMX exposure
+INFO  AnnotationMBeanExporter - Located managed bean 'callMonitor': registering with JMX server as MBean [petclinic:type=CallMonitor]
+INFO  ContextLoader - Root WebApplicationContext: initialization completed in 7053 ms
+INFO  DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+INFO  XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Fri Nov 04 22:01:42 EDT 2016]; parent: Root WebApplicationContext
+INFO  XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring/mvc-core-config.xml]
+INFO  XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring/mvc-view-config.xml]
+INFO  AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  Jaxb2Marshaller - Creating JAXBContext with classes to be bound [class org.springframework.samples.petclinic.model.Vets]
+INFO  RequestMappingHandlerMapping - Mapped "{[/oups],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.CrashController.triggerException()
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/new],methods=[POST]}" onto public java.lang.String org.springframework.samples.petclinic.web.OwnerController.processCreationForm(org.springframework.samples.petclinic.model.Owner,org.springframework.validation.BindingResult)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/edit],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.OwnerController.initUpdateOwnerForm(int,org.springframework.ui.Model)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/edit],methods=[POST]}" onto public java.lang.String org.springframework.samples.petclinic.web.OwnerController.processUpdateOwnerForm(org.springframework.samples.petclinic.model.Owner,org.springframework.validation.BindingResult,int)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/new],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.OwnerController.initCreationForm(java.util.Map<java.lang.String, java.lang.Object>)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/find],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.OwnerController.initFindForm(java.util.Map<java.lang.String, java.lang.Object>)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.OwnerController.processFindForm(org.springframework.samples.petclinic.model.Owner,org.springframework.validation.BindingResult,java.util.Map<java.lang.String, java.lang.Object>)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.samples.petclinic.web.OwnerController.showOwner(int)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/pets/new],methods=[POST]}" onto public java.lang.String org.springframework.samples.petclinic.web.PetController.processCreationForm(org.springframework.samples.petclinic.model.Owner,org.springframework.samples.petclinic.model.Pet,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/pets/{petId}/edit],methods=[POST]}" onto public java.lang.String org.springframework.samples.petclinic.web.PetController.processUpdateForm(org.springframework.samples.petclinic.model.Pet,org.springframework.validation.BindingResult,org.springframework.samples.petclinic.model.Owner,org.springframework.ui.ModelMap)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/pets/new],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.PetController.initCreationForm(org.springframework.samples.petclinic.model.Owner,org.springframework.ui.ModelMap)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/pets/{petId}/edit],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.PetController.initUpdateForm(int,org.springframework.ui.ModelMap)
+INFO  RequestMappingHandlerMapping - Mapped "{[/vets.json || /vets.xml]}" onto public org.springframework.samples.petclinic.model.Vets org.springframework.samples.petclinic.web.VetController.showResourcesVetList()
+INFO  RequestMappingHandlerMapping - Mapped "{[/vets.html]}" onto public java.lang.String org.springframework.samples.petclinic.web.VetController.showVetList(java.util.Map<java.lang.String, java.lang.Object>)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/{ownerId}/pets/{petId}/visits/new],methods=[POST]}" onto public java.lang.String org.springframework.samples.petclinic.web.VisitController.processNewVisitForm(org.springframework.samples.petclinic.model.Visit,org.springframework.validation.BindingResult)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/*/pets/{petId}/visits/new],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.VisitController.initNewVisitForm(int,java.util.Map<java.lang.String, java.lang.Object>)
+INFO  RequestMappingHandlerMapping - Mapped "{[/owners/*/pets/{petId}/visits],methods=[GET]}" onto public java.lang.String org.springframework.samples.petclinic.web.VisitController.showVisits(int,java.util.Map<java.lang.String, java.lang.Object>)
+INFO  RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Fri Nov 04 22:01:42 EDT 2016]; parent: Root WebApplicationContext
+INFO  RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Fri Nov 04 22:01:42 EDT 2016]; parent: Root WebApplicationContext
+INFO  SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+INFO  SimpleUrlHandlerMapping - Mapped URL path [/vendors/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+INFO  SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+INFO  SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+INFO  DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 2032 ms
+INFO  XmlWebApplicationContext - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Fri Nov 04 22:01:42 EDT 2016]; parent: Root WebApplicationContext
+INFO  XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Nov 04 22:01:35 EDT 2016]; root of context hierarchy
+INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans
+INFO  EhCacheManagerFactoryBean - Shutting down EhCache CacheManager
+INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'petclinic'
+Terminate batch job (Y/N)? 
