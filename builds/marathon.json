@@ -1,0 +1,16 @@
+{  
+  "id": "petclinic-demo-cont",
+  "cpus": 1,
+  "mem": 1024,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "bewinsto7604/petclinic-demo-nov",
+      "network": "HOST",
+      "ports": [
+	9966
+      ]    
+    }
+  }
+}
