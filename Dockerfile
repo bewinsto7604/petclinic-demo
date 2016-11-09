@@ -1,1 +1,2 @@
-ENTRYPOINT ["mvn -U", "tomcat7:run"]
+FROM maven:3-jdk-8-onbuild
+COPY settings.xml /usr/local/maven/conf/
