@@ -1,3 +1,3 @@
-FROM maven:3-jdk-8-onbuild
-COPY . /usr/src/app
-ENTRYPOINT ["mvn", "tomcat7:run"]
+RUN apt-get update
+RUN apt-get install -y maven 
+ADD settings.xml /root/.m2/settings.xml
