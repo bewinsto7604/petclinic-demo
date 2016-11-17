@@ -7,5 +7,7 @@ COPY settings.xml /root/.m2/settings.xml
 #RUN ["mvn", "help:effective-settings"]
 CMD mvn "help:effective-settings"
 #RUN ["mvn", "dependency:resolve"]
+CMD mvn "dependency:resolve"
 ADD src /code/src
-ENTRYPOINT ["mvn", "tomcat7:run"]
+#ENTRYPOINT ["mvn", "tomcat7:run"]
+CMD mvn "tomcat7:run"
