@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install -y maven
 WORKDIR /code
 ADD pom.xml /code/pom.xml
-COPY settings.xml ~/.m2/settings.xml
+COPY settings.xml /usr/share/maven/conf/settings.xml
 RUN ["mvn", "help:effective-settings"]
 RUN ["mvn", "dependency:resolve"]
 ADD src /code/src
