@@ -4,4 +4,4 @@ RUN apt-get install -y maven
 WORKDIR /code
 ADD pom.xml /code/pom.xml
 COPY settings.xml /root/.m2/settings.xml
-CMD cat "/root/.m2/settings.xml"
+CMD cat "/usr/share/maven/settings.xml"
