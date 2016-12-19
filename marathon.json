@@ -1,12 +1,12 @@
 {  
-  "id": "******",
+  "id": "petclinic-demo-nov",
   "cpus": 1,
   "mem": 1024,
   "instances": 1,
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "*******",
+      "image": "bewinsto7604/petclinic-demo-nov",
       "network": "HOST"   
     }
   },
