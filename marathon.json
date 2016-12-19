@@ -7,10 +7,12 @@
     "type": "DOCKER",
     "docker": {
       "image": "bewinsto7604/petclinic-demo-nov",
-      "network": "HOST"   
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 0, "hostPort": 0 },
+        { "containerPort": 0, "hostPort": 0 },
+        { "containerPort": 0, "hostPort": 0 }
+      ]      
     }
-  },
-  "ports": [
-     9966
-  ]  
+  }  
 }
