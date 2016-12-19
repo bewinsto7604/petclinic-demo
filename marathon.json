@@ -9,7 +9,7 @@
       "image": "bewinsto7604/petclinic-demo-nov",
       "network": "BRIDGE",
       "portMappings": [
-        { "containerPort": 80, "hostPort": 80 }
+        { "containerPort": 9966, "hostPort": 9966 }
       ]      
     }
   }  
