@@ -472,8 +472,8 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>
-   </profiles>-->
+        </profile>-->
+   </profiles>
 
     <url>demopetclinic</url>
 </project>
