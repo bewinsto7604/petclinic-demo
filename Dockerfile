@@ -1,8 +1,8 @@
 FROM maven:3-jdk-8
 ADD settings.xml /root/.m2/settings.xml
 WORKDIR /codes
-ADD pom.xml /codes/pom.xml
+ADD pom.xml /code/pom.xml
 CMD mvn "help:effective-settings"
 CMD mvn "dependency:resolve"
-ADD src /codes/src
+ADD src /code/src
 CMD mvn "tomcat7:run"
