@@ -435,7 +435,7 @@
                 </dependency>
             </dependencies>
         </profile>
-        <profile>
+        <!--<profile>
             <id>MySQL</id>           
             <properties>
                 <db.script>mysql</db.script>
@@ -472,7 +472,7 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>
+        </profile>-->
    </profiles>
 
     <url>demopetclinic</url>
