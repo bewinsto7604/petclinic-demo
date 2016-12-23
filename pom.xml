@@ -414,11 +414,8 @@
                 </plugins>
             </build>
         </profile>
-        <profile>
-            <id>HSQLDB</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>            
+        <!--<profile>
+            <id>HSQLDB</id>            
             <properties>
                 <db.script>hsqldb</db.script>
                 <jpa.database>HSQL</jpa.database>
@@ -434,14 +431,17 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>
-        <!--<profile>
-            <id>MySQL</id>            
+        </profile>-->
+        <profile>
+            <id>MySQL</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>            
             <properties>
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
                 <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-                <jdbc.url>jdbc:mysql://3.3.0.9:3306/petclinic?useUnicode=true</jdbc.url>
+                <jdbc.url>jdbc:mysql://mysql.marathon.mesos:3306/petclinic?useUnicode=true</jdbc.url>
                 <jdbc.username>root</jdbc.username>
                 <jdbc.password>petclinic123</jdbc.password>
             </properties>
@@ -454,7 +454,7 @@
                 </dependency>
             </dependencies>
         </profile>
-        <profile>
+        <!--<profile>
             <id>PostgreSQL</id>
             <properties>
                 <db.script>postgresql</db.script>
