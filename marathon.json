@@ -1,5 +1,5 @@
 {  
-  "id": "petclinic-demo",
+  "id": "petclinic-demo-nov",
   "cpus": 1,
   "mem": 1025,
   "instances": 1,
@@ -9,7 +9,7 @@
       "image": "bewinsto7604/petclinic-demo-nov",
       "network": "BRIDGE",
       "portMappings": [
-        { "containerPort": 9977, "hostPort": 9977 }
+        { "containerPort": 9966, "hostPort": 9966 }
       ]      
     }
   }  
