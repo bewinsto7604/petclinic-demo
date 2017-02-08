@@ -5,4 +5,4 @@ ADD pom.xml /code/pom.xml
 CMD mvn "help:effective-settings"
 CMD mvn "dependency:resolve"
 ADD src /code/src
-CMD mvn "tomcat7:run"
+CMD mvn "tomcat:run"
