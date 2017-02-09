@@ -1,7 +1,7 @@
 ## Running petclinic locally
 ```
 	git clone https://github.com/bewinsto7604/petclinic-demo.git
-	cd spring-petclinic
+	cd petclinic-demo
 	./mvnw tomcat7:run
 ```
 
