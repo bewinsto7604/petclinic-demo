@@ -1,7 +1,7 @@
 {  
   "id": "petclinic-demo-nov",
-  "cpus": 1,
-  "mem": 1025,
+  "cpus": 0.5,
+  "mem": 524,
   "instances": 1,
   "container": {
     "type": "DOCKER",
@@ -12,5 +12,5 @@
         { "containerPort": 9966, "hostPort": 9966 }
       ]      
     }
-  }  
+  }
 }
