@@ -99,8 +99,8 @@ under the License.
       <host>proxy.houston.hpecorp.net</host>
       <port>8080</port>
       <nonProxyHosts>10.241.0.11|10.241.0.12|10.241.0.13|10.241.0.14|10.241.0.15|10.241.0.16|10.241.0.17|10.241.0.18|10.241.0.19|10.241.0.20|10.241.0.21|10.241.0.22</nonProxyHosts>
-    </proxy>
-  </proxies>-->
+    </proxy>-->
+  </proxies>
 
   <!-- servers
    | This is a list of authentication profiles, keyed by the server-id used within the system.
