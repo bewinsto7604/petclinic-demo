@@ -1,7 +1,7 @@
 {  
   "id": "petclinic-demo-nov",
-  "cpus": 0.5,
-  "mem": 524,
+  "cpus": 1,
+  "mem": 1028,
   "instances": 1,
   "container": {
     "type": "DOCKER",
