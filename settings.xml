@@ -90,7 +90,7 @@ under the License.
     <!-- proxy
      | Specification for one proxy, to be used in connecting to the network.
      |-->
-    <proxy>
+    <!--<proxy>
       <id>lab-proxy</id>
       <active>true</active>
       <protocol>http</protocol>
@@ -98,8 +98,8 @@ under the License.
       <password></password>
       <host>proxy.houston.hpecorp.net</host>
       <port>8080</port>
-      <nonProxyHosts>10.241.1.109|10.241.1.110|10.241.1.121|10.241.1.116|10.241.1.112|10.241.1.124|10.241.1.106|10.241.1.115|10.241.1.120|10.241.1.102|10.241.1.113|10.241.1.117|10.241.1.114|10.241.1.118|172.16.0.112|172.16.0.119|172.16.0.122|172.16.0.117|172.16.0.107|172.16.0.114|172.16.0.103|172.16.0.108|172.16.0.113|172.16.0.115|172.16.0.109|172.16.0.105|172.16.0.104|172.16.0.110</nonProxyHosts>
-    </proxy>
+      <nonProxyHosts>10.241.1.109|10.241.1.110|10.241.1.121|10.241.1.116|10.241.1.112|10.241.1.124|10.241.1.106|10.241.1.115|10.241.1.120|10.241.1.102|10.241.1.113|10.241.1.117|10.241.1.114|10.241.1.118</nonProxyHosts>
+    </proxy>-->
   </proxies>
 
   <!-- servers
@@ -107,6 +107,16 @@ under the License.
    | Authentication profiles can be used whenever maven must make a connection to a remote server.
    |-->
   <servers>
+    <server>
+      <id>maven-snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+    <server>
+      <id>maven-releases</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server> 
     <!-- server
      | Specifies the authentication information to use when connecting to a particular server, identified by
      | a unique name within the system (referred to by the 'id' attribute below).
