@@ -15,7 +15,7 @@
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	<docker.image.prefix>petclinic</docker.image.prefix>
+
         <!-- Spring -->
         <spring-io-platform.version>2.0.8.RELEASE</spring-io-platform.version>
         <spring-data-jdbc.version>1.1.0.RELEASE</spring-data-jdbc.version>
@@ -34,6 +34,13 @@
 
         <cobertura.version>2.7</cobertura.version>
     </properties>
+    
+  <!--<repositories>
+    <repository>
+      <id>maven-public</id>
+      <url>http://192.168.99.108:8081/repository/maven-public/</url>
+    </repository>
+  </repositories>  -->  
 
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
@@ -125,7 +132,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
@@ -217,6 +228,17 @@
             <artifactId>json-simple</artifactId>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+      <snapshotRepository>
+        <id>maven-snapshots</id>
+        <url>http://192.168.99.108:8081/repository/maven-snapshots/</url>
+      </snapshotRepository>
+      <repository>
+        <id>maven-releass</id>
+        <url>http://192.168.99.108:8081/repository/maven-snapshots/</url>
+      </repository>      
+  </distributionManagement>
 
     <!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
     <build>
@@ -339,7 +361,7 @@
                 <configuration>
                     <encoding>UTF-8</encoding>
                 </configuration>
-            </plugin>             
+            </plugin>                        
         </plugins>
     </build>
     <reporting>
@@ -437,14 +459,11 @@
         </profile>
         <!--<profile>
             <id>MySQL</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>            
             <properties>
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
                 <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-                <jdbc.url>jdbc:mysql://mysql.marathon.mesos:3306/petclinic?useUnicode=true</jdbc.url>
+                <jdbc.url>jdbc:mysql://192.168.99.100:3306/petclinic?useUnicode=true</jdbc.url>
                 <jdbc.username>root</jdbc.username>
                 <jdbc.password>petclinic123</jdbc.password>
             </properties>
@@ -456,8 +475,8 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>-->
-        <!--<profile>
+        </profile>
+        <profile>
             <id>PostgreSQL</id>
             <properties>
                 <db.script>postgresql</db.script>
