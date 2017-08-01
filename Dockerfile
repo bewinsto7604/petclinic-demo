@@ -1,8 +1,11 @@
-FROM maven:3-jdk-8
-ADD settings.xml /root/.m2/settings.xml
-WORKDIR /code
-ADD pom.xml /code/pom.xml
-CMD mvn "help:effective-settings"
-CMD mvn "dependency:resolve"
-ADD src /code/src
-CMD mvn "tomcat7:run"
+FROM maven:3.3.9-jdk-8-onbuild AS petclinicbuild
+WORKDIR /usr/petclinic
+COPY pom.xml .
+COPY settings.xml /usr/share/maven/ref/
+ADD src /usr/petclinic/src
+RUN mvn -B -s /usr/share/maven/ref/settings.xml deploy -DskipTests
+
+FROM tomcat:7-jre8
+COPY tomcat-users.xml /usr/local/tomcat/conf/
+COPY --from=0 /usr/petclinic/target/petclinic.war /usr/local/tomcat/webapps/petclinic.war
+EXPOSE 8090
