@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
-    <artifactId>spring-petclinic</artifactId>
-    <version>4.2.6-SNAPSHOT</version>
+    <artifactId>petclinic-demo</artifactId>
+    <version>4.2.6-RELEASE</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -235,8 +235,8 @@
         <url>http://192.168.99.108:8081/repository/maven-snapshots/</url>
       </snapshotRepository>
       <repository>
-        <id>maven-releass</id>
-        <url>http://192.168.99.108:8081/repository/maven-snapshots/</url>
+        <id>maven-releases</id>
+        <url>http://192.168.99.108:8081/repository/maven-releases/</url>
       </repository>      
   </distributionManagement>
 
