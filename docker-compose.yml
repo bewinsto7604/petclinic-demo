@@ -1,0 +1,10 @@
+version: '3'
+services:
+  petclinic:
+    image: ${TAG}
+    ports:
+      - 8090:8080
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
