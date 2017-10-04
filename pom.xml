@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
-    <artifactId>petclinic-demo</artifactId>
+    <artifactId>petclinic</artifactId>
     <version>4.3.12-RELEASE</version>
 
     <name>petclinic</name>
