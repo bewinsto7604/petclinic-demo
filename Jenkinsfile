@@ -17,7 +17,7 @@ pipeline {
       steps {
         git url: 'https://github.com/bewinsto7604/petclinic-demo.git'
         script {
-            version = readMavenPom().getVersion().substring(0,5)
+            version = readMavenPom().getVersion()
             artifactid = readMavenPom().getArtifactId()
             d = [test: 'Default', something: 'Default', other: 'Default']
             props = readProperties defaults: d, file: 'pipeline.properties', text: 'other=Override'
