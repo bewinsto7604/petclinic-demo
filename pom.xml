@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>petclinic</artifactId>
-    <version>4.3.15-RELEASE</version>
+    <version>4.3.16-RELEASE</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -232,11 +232,11 @@
     <distributionManagement>
       <snapshotRepository>
         <id>maven-snapshots</id>
-        <url>http://192.168.99.108:8081/repository/maven-snapshots/</url>
+        <url>http://192.168.99.100:8081/repository/maven-snapshots/</url>
       </snapshotRepository>
       <repository>
         <id>maven-releases</id>
-        <url>http://192.168.99.108:8081/repository/maven-releases/</url>
+        <url>http://192.168.99.100:8081/repository/maven-releases/</url>
       </repository>      
   </distributionManagement>
 
