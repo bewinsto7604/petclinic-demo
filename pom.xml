@@ -436,7 +436,7 @@
                 </plugins>
             </build>
         </profile>
-        <!--  <profile>
+         <profile>
             <id>HSQLDB</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -456,8 +456,8 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>-->
-        <profile>
+        </profile>
+        <!-- <profile>
             <id>MySQL</id>
             <properties>
                 <db.script>mysql</db.script>
@@ -476,7 +476,7 @@
                 </dependency>
             </dependencies>
         </profile>
-        <!-- <profile>
+        <profile>
             <id>PostgreSQL</id>
             <properties>
                 <db.script>postgresql</db.script>
