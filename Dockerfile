@@ -3,7 +3,7 @@ WORKDIR /usr/petclinic
 COPY pom.xml .
 COPY settings.xml /usr/share/maven/ref/
 ADD src /usr/petclinic/src
-RUN mvn -B -s /usr/share/maven/ref/settings.xml install -DskipTests
+RUN mvn -B -s /usr/share/maven/ref/settings.xml deploy -DskipTests
 
 FROM tomcat:7-jre8
 COPY tomcat-users.xml /usr/local/tomcat/conf/

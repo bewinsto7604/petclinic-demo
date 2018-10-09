@@ -35,12 +35,12 @@
         <cobertura.version>2.7</cobertura.version>
     </properties>
     
-  <!--<repositories>
+  <repositories>
     <repository>
       <id>maven-public</id>
-      <url>http://192.168.99.108:8081/repository/maven-public/</url>
+      <url>http://ec2-54-224-188-1.compute-1.amazonaws.com:8081/</url>
     </repository>
-  </repositories>  -->  
+  </repositories>  
 
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
