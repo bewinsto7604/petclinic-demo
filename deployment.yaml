@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: petclinic
-        image: ${PETCLINICTAG}
+        image: docker-ee-dtr-855460208.us-east-1.elb.amazonaws.com/admin/petclinic:4.3.18-RELEASE
         ports:
         - containerPort: 8080
 ---
