@@ -110,12 +110,12 @@ under the License.
     <server>
       <id>maven-snapshots</id>
       <username>admin</username>
-      <password>admin123</password>
+      <password>discover2018</password>
     </server>
     <server>
       <id>maven-releases</id>
       <username>admin</username>
-      <password>admin123</password>
+      <password>discover2018</password>
     </server> 
     <!-- server
      | Specifies the authentication information to use when connecting to a particular server, identified by
